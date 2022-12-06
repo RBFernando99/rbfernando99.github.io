@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import ContactFormService from "../services/contactform.service";
 
 import { useForm } from "react-hook-form";
 
@@ -17,54 +17,56 @@ type FormData = {
 
 function MyContactForm() {
   const { register, handleSubmit } = useForm<FormData>();
-  const onSubmit = handleSubmit((data) => console.log(data));
+  const onSubmit = handleSubmit((data) => ContactFormService.save(data));
   return (
-    <Container>
-      <form onSubmit={onSubmit}>
-        <Row className="pt-3">
-          <Col>
-            <Form.Group className="mb-3" controlId="formName">
-              <Form.Label>Name</Form.Label>
-              <Form.Control placeholder="Enter name" {...register("name")} />
-            </Form.Group>
-          </Col>
-          <Col>
-            <Form.Group className="mb-3" controlId="formEmail">
-              <Form.Label>Email</Form.Label>
-              <Form.Control
-                required
-                type="email"
-                placeholder="Enter email"
-                {...register("email")}
-              />
-            </Form.Group>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            {" "}
-            <Form.Group className="mb-3" controlId="formMessage">
-              <Form.Label>Message</Form.Label>
-              <Form.Control
-                required
-                as="textarea"
-                rows={3}
-                placeholder="Enter message"
-                {...register("message")}
-              />
-            </Form.Group>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Form.Group className="mb-3" controlId="formCheck">
-              <Form.Check required label="Agree to terms and conditions" />
-            </Form.Group>
-          </Col>
-        </Row>
-        <Button type="submit">Submit</Button>
-      </form>
-    </Container>
+    <div>
+      <Container>
+        <form onSubmit={onSubmit}>
+          <Row className="pt-3">
+            <Col>
+              <Form.Group className="mb-3" controlId="formName">
+                <Form.Label>Name</Form.Label>
+                <Form.Control placeholder="Enter name" {...register("name")} />
+              </Form.Group>
+            </Col>
+            <Col>
+              <Form.Group className="mb-3" controlId="formEmail">
+                <Form.Label>Email</Form.Label>
+                <Form.Control
+                  required
+                  type="email"
+                  placeholder="Enter email"
+                  {...register("email")}
+                />
+              </Form.Group>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              {" "}
+              <Form.Group className="mb-3" controlId="formMessage">
+                <Form.Label>Message</Form.Label>
+                <Form.Control
+                  required
+                  as="textarea"
+                  rows={3}
+                  placeholder="Enter message"
+                  {...register("message")}
+                />
+              </Form.Group>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Form.Group className="mb-3" controlId="formCheck">
+                <Form.Check required label="Agree to terms and conditions" />
+              </Form.Group>
+            </Col>
+          </Row>
+          <Button type="submit">Submit</Button>
+        </form>
+      </Container>
+    </div>
   );
 }
 
