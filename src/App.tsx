@@ -3,6 +3,7 @@ import "./App.css";
 
 import MyNavbar from "./components/MyNavbar";
 import MyContactForm from "./components/MyContactForm";
+import MyFooter from "./components/MyFooter";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <header className="App-header">
         <MyNavbar></MyNavbar>
         <MyContactForm></MyContactForm>
+        <MyFooter></MyFooter>
       </header>
     </div>
   );

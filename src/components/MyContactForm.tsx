@@ -19,10 +19,10 @@ function MyContactForm() {
   const { register, handleSubmit } = useForm<FormData>();
   const onSubmit = handleSubmit((data) => ContactFormService.save(data));
   return (
-    <div>
+    <div className="p-3">
       <Container>
         <form onSubmit={onSubmit}>
-          <Row className="pt-3">
+          <Row>
             <Col>
               <Form.Group className="mb-3" controlId="formName">
                 <Form.Label>Name</Form.Label>
