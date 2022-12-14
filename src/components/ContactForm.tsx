@@ -19,8 +19,8 @@ function ContactForm() {
   const { register, handleSubmit } = useForm<FormData>();
   const onSubmit = handleSubmit((data) => ContactFormService.save(data));
   return (
-    <div className="p-3">
-      <div>
+    <div id="contact-form" className="p-3 pb-5">
+      <div className="pb-2">
         <Container>
           <Row>
             <Col>
@@ -29,7 +29,6 @@ function ContactForm() {
           </Row>
         </Container>
       </div>
-      <br />
       <div>
         <Container>
           <form onSubmit={onSubmit}>

@@ -1,8 +1,8 @@
 function MyFooter() {
   const currentYear = new Date().getFullYear();
   return (
-    <div className="text-center p-3 bg-light">
-      <div className="px-3">
+    <div className="p-3 bg-light">
+      <div className="d-flex justify-content-center gap-3">
         <a href="mailto:RBFernando99@gmail.com">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@ function MyFooter() {
         </a>
       </div>
       <hr />
-      <div>
+      <div className="text-center">
         <text>© 2022 Copyright </text>
         <a href={currentYear.toString()}>Fernando R. B.</a>
       </div>
