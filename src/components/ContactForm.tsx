@@ -15,59 +15,74 @@ type FormData = {
   message: string;
 };
 
-function MyContactForm() {
+function ContactForm() {
   const { register, handleSubmit } = useForm<FormData>();
   const onSubmit = handleSubmit((data) => ContactFormService.save(data));
   return (
     <div className="p-3">
-      <Container>
-        <form onSubmit={onSubmit}>
+      <div>
+        <Container>
           <Row>
             <Col>
-              <Form.Group className="mb-3" controlId="formName">
-                <Form.Label>Name</Form.Label>
-                <Form.Control placeholder="Enter name" {...register("name")} />
-              </Form.Group>
-            </Col>
-            <Col>
-              <Form.Group className="mb-3" controlId="formEmail">
-                <Form.Label>Email</Form.Label>
-                <Form.Control
-                  required
-                  type="email"
-                  placeholder="Enter email"
-                  {...register("email")}
-                />
-              </Form.Group>
+              <h1>Contact me</h1>
             </Col>
           </Row>
-          <Row>
-            <Col>
-              {" "}
-              <Form.Group className="mb-3" controlId="formMessage">
-                <Form.Label>Message</Form.Label>
-                <Form.Control
-                  required
-                  as="textarea"
-                  rows={3}
-                  placeholder="Enter message"
-                  {...register("message")}
-                />
-              </Form.Group>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <Form.Group className="mb-3" controlId="formCheck">
-                <Form.Check required label="Agree to terms and conditions" />
-              </Form.Group>
-            </Col>
-          </Row>
-          <Button type="submit">Submit</Button>
-        </form>
-      </Container>
+        </Container>
+      </div>
+      <br />
+      <div>
+        <Container>
+          <form onSubmit={onSubmit}>
+            <Row>
+              <Col>
+                <Form.Group className="mb-3" controlId="formName">
+                  <Form.Label>Name</Form.Label>
+                  <Form.Control
+                    placeholder="Enter name"
+                    {...register("name")}
+                  />
+                </Form.Group>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" controlId="formEmail">
+                  <Form.Label>Email</Form.Label>
+                  <Form.Control
+                    required
+                    type="email"
+                    placeholder="Enter email"
+                    {...register("email")}
+                  />
+                </Form.Group>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                {" "}
+                <Form.Group className="mb-3" controlId="formMessage">
+                  <Form.Label>Message</Form.Label>
+                  <Form.Control
+                    required
+                    as="textarea"
+                    rows={3}
+                    placeholder="Enter message"
+                    {...register("message")}
+                  />
+                </Form.Group>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Form.Group className="mb-3" controlId="formCheck">
+                  <Form.Check required label="Agree to terms and conditions" />
+                </Form.Group>
+              </Col>
+            </Row>
+            <Button type="submit">Submit</Button>
+          </form>
+        </Container>
+      </div>
     </div>
   );
 }
 
-export default MyContactForm;
+export default ContactForm;
