@@ -29,8 +29,9 @@ function MyFooter() {
       </div>
       <hr />
       <div className="text-center">
-        <text>© 2022 Copyright </text>
-        <a href={currentYear.toString()}>Fernando R. B.</a>
+        <p>
+          © 2022 Copyright <a href={currentYear.toString()}>Fernando R. B.</a>
+        </p>
       </div>
     </div>
   );

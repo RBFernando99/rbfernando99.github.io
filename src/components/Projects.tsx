@@ -1,12 +1,36 @@
+import GitHubService from "../services/github.service";
+
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 import Card from "react-bootstrap/Card";
+import CardGroup from "react-bootstrap/CardGroup";
 
 import Button from "react-bootstrap/Button";
 
+import { useState, useEffect } from "react";
+
 function Projects() {
+  const [repos, setRepos] = useState([
+    {
+      id: 0,
+      name: "",
+      description: "",
+      html_url: "",
+    },
+  ]);
+
+  const getRepos = () => {
+    GitHubService.getReposFromUser("RBFernando99").then((response) => {
+      setRepos(response.data);
+    });
+  };
+
+  useEffect(() => {
+    getRepos();
+  }, []);
+
   return (
     <div id="projects" className="p-3">
       <div className="pb-2">
@@ -17,66 +41,21 @@ function Projects() {
             </Col>
           </Row>
         </Container>
-      </div>
-      <div>
         <Container>
           <Row>
-            <Col>
-              <Card style={{ width: "18rem" }}>
-                <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                  <a href="https://www.github.com/RBFernando99/">
-                    <Button variant="primary">Go somewhere</Button>
-                  </a>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col>
-              <Card style={{ width: "18rem" }}>
-                <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                  <a href="https://www.github.com/RBFernando99/">
-                    <Button variant="primary">Go somewhere</Button>
-                  </a>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col>
-              <Card style={{ width: "18rem" }}>
-                <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                  <a href="https://www.github.com/RBFernando99/">
-                    <Button variant="primary">Go somewhere</Button>
-                  </a>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col>
-              <Card style={{ width: "18rem" }}>
-                <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                  <a href="https://www.github.com/RBFernando99/">
-                    <Button variant="primary">Go somewhere</Button>
-                  </a>
-                </Card.Body>
-              </Card>
-            </Col>
+            {repos.map((repo) => (
+              <Col key={repo.id} className="mt-5">
+                <Card style={{ width: "18rem" }}>
+                  <Card.Body>
+                    <Card.Title>{repo.name}</Card.Title>
+                    <Card.Text>{repo.description}</Card.Text>
+                    <a href={repo.html_url}>
+                      <Button variant="primary">Repository</Button>
+                    </a>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
           </Row>
         </Container>
       </div>

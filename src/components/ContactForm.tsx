@@ -56,7 +56,6 @@ function ContactForm() {
             </Row>
             <Row>
               <Col>
-                {" "}
                 <Form.Group className="mb-3" controlId="formMessage">
                   <Form.Label>Message</Form.Label>
                   <Form.Control
