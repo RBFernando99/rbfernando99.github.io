@@ -11,6 +11,7 @@ function MyNavbar() {
         <Container>
           <Navbar.Brand href="#app">Home</Navbar.Brand>
           <Nav className="me-auto">
+            <Nav.Link href="#skills">Skills</Nav.Link>
             <Nav.Link href="#projects">Projects</Nav.Link>
             <Nav.Link href="#contact-form">Contact</Nav.Link>
           </Nav>
