@@ -32,7 +32,7 @@ function MyFooter() {
       <hr className="text-white" />
       <div className="text-center text-white">
         <p>
-          © 2022 Copyright{" "}
+          © 2022 Copyright.{" "}
           <a href={currentYear.toString()} className="text-white">
             Fernando R. B.
           </a>

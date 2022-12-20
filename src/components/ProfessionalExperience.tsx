@@ -25,7 +25,8 @@ function ProfessionalExperience() {
             place="Córdoba, Spain"
           ></Event>
         </Row>
-        <Row>
+        <hr />
+        <Row className="mt-4">
           <Event
             title="Web Designer"
             issuer="Freelance"

@@ -26,7 +26,8 @@ function Education() {
             place="Córdoba, Spain"
           ></Event>
         </Row>
-        <Row>
+        <hr />
+        <Row className="mt-4">
           <Event
             title="SAP4Business Academy"
             issuer="Deloitte"

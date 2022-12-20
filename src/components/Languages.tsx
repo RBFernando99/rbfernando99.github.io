@@ -16,7 +16,7 @@ function Languages() {
       <Container className="mb-3">
         <Row>
           <Col>
-            <h1>Languages</h1>
+            <h2>Languages</h2>
           </Col>
         </Row>
       </Container>
@@ -25,7 +25,7 @@ function Languages() {
           <Col className="mb-5">
             <Card style={{ width: "18rem" }}>
               <Card.Body>
-                <Card.Title>Spanish</Card.Title>
+                <Card.Title>Spanish 🇪🇸</Card.Title>
                 <Card.Text>
                   <StarFill />
                   <StarFill />
@@ -39,7 +39,7 @@ function Languages() {
           <Col className="mb-5">
             <Card style={{ width: "18rem" }}>
               <Card.Body>
-                <Card.Title>English</Card.Title>
+                <Card.Title>English 🇬🇧</Card.Title>
                 <Card.Text>
                   <StarFill />
                   <StarFill />
@@ -50,15 +50,13 @@ function Languages() {
               </Card.Body>
             </Card>
           </Col>
-        </Row>
-        <Row>
           <Col className="mb-5">
             <Card style={{ width: "18rem" }}>
               <Card.Body>
-                <Card.Title>German</Card.Title>
+                <Card.Title>German 🇩🇪</Card.Title>
                 <Card.Text>
                   <StarFill />
-                  <Star />
+                  <StarHalfFill />
                   <Star />
                   <Star />
                   <Star />
@@ -69,11 +67,11 @@ function Languages() {
           <Col className="mb-5">
             <Card style={{ width: "18rem" }}>
               <Card.Body>
-                <Card.Title>Italian</Card.Title>
+                <Card.Title>Italian 🇮🇹</Card.Title>
                 <Card.Text>
                   <StarFill />
                   <StarFill />
-                  <Star />
+                  <StarFill />
                   <Star />
                   <Star />
                 </Card.Text>

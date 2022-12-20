@@ -19,8 +19,8 @@ function Skills() {
         </Row>
       </Container>
       <Container>
-        <SoftSkills />
         <HardSkills />
+        <SoftSkills />
         <Languages />
       </Container>
     </div>

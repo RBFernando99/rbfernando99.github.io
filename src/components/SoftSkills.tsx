@@ -16,7 +16,7 @@ function SoftSkills() {
       <Container className="mb-3">
         <Row>
           <Col>
-            <h1>Soft Skills</h1>
+            <h2>Soft Skills</h2>
           </Col>
         </Row>
       </Container>
