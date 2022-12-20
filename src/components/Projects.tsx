@@ -56,19 +56,6 @@ function Projects() {
               </Card>
             </Col>
           ))}
-          {repos.map((repo) => (
-            <Col key={repo.id} className="mb-5">
-              <Card style={{ width: "18rem" }}>
-                <Card.Body>
-                  <Card.Title>{repo.name}</Card.Title>
-                  <Card.Text>{repo.description}</Card.Text>
-                  <a href={repo.html_url}>
-                    <Button variant="primary">Repository</Button>
-                  </a>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
         </Row>
       </Container>
     </div>
