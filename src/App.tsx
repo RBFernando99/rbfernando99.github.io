@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 
 import MyNavbar from "./components/MyNavbar";
+import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
@@ -13,6 +14,7 @@ function App() {
         <MyNavbar></MyNavbar>
       </header>
       <div className="pt-8">
+        <Skills></Skills>
         <Projects></Projects>
         <ContactForm></ContactForm>
         <Footer></Footer>
