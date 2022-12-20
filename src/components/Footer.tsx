@@ -3,7 +3,7 @@ import React from "react";
 function MyFooter() {
   const currentYear = new Date().getFullYear();
   return (
-    <div className="p-3 bg-primary">
+    <div className="bg-primary p-3">
       <div className="d-flex justify-content-center gap-3">
         <a href="mailto:RBFernando99@gmail.com">
           <svg

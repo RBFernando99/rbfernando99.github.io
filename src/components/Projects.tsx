@@ -33,33 +33,44 @@ function Projects() {
   }, []);
 
   return (
-    <div id="projects" className="p-3">
-      <div className="pb-2">
-        <Container>
-          <Row>
-            <Col>
-              <h1>Projects</h1>
+    <div id="projects" className="">
+      <Container className="mb-3">
+        <Row>
+          <Col>
+            <h1>Projects</h1>
+          </Col>
+        </Row>
+      </Container>
+      <Container>
+        <Row>
+          {repos.map((repo) => (
+            <Col key={repo.id} className="mb-5">
+              <Card style={{ width: "18rem" }}>
+                <Card.Body>
+                  <Card.Title>{repo.name}</Card.Title>
+                  <Card.Text>{repo.description}</Card.Text>
+                  <a href={repo.html_url}>
+                    <Button variant="primary">Repository</Button>
+                  </a>
+                </Card.Body>
+              </Card>
             </Col>
-          </Row>
-        </Container>
-        <Container>
-          <Row>
-            {repos.map((repo) => (
-              <Col key={repo.id} className="mt-5">
-                <Card style={{ width: "18rem" }}>
-                  <Card.Body>
-                    <Card.Title>{repo.name}</Card.Title>
-                    <Card.Text>{repo.description}</Card.Text>
-                    <a href={repo.html_url}>
-                      <Button variant="primary">Repository</Button>
-                    </a>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </div>
+          ))}
+          {repos.map((repo) => (
+            <Col key={repo.id} className="mb-5">
+              <Card style={{ width: "18rem" }}>
+                <Card.Body>
+                  <Card.Title>{repo.name}</Card.Title>
+                  <Card.Text>{repo.description}</Card.Text>
+                  <a href={repo.html_url}>
+                    <Button variant="primary">Repository</Button>
+                  </a>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </div>
   );
 }

@@ -21,66 +21,59 @@ function ContactForm() {
   const { register, handleSubmit } = useForm<FormData>();
   const onSubmit = handleSubmit((data) => ContactFormService.save(data));
   return (
-    <div id="contact-form" className="p-3 pb-5">
-      <div className="pb-2">
-        <Container>
+    <div id="contact-form" className="mb-5">
+      <Container className="mb-3">
+        <Row>
+          <Col>
+            <h1>Contact me</h1>
+          </Col>
+        </Row>
+      </Container>
+      <Container>
+        <form onSubmit={onSubmit}>
           <Row>
             <Col>
-              <h1>Contact me</h1>
+              <Form.Group className="mb-3" controlId="formName">
+                <Form.Label>Name</Form.Label>
+                <Form.Control placeholder="Enter name" {...register("name")} />
+              </Form.Group>
+            </Col>
+            <Col>
+              <Form.Group className="mb-3" controlId="formEmail">
+                <Form.Label>Email</Form.Label>
+                <Form.Control
+                  required
+                  type="email"
+                  placeholder="Enter email"
+                  {...register("email")}
+                />
+              </Form.Group>
             </Col>
           </Row>
-        </Container>
-      </div>
-      <div>
-        <Container>
-          <form onSubmit={onSubmit}>
-            <Row>
-              <Col>
-                <Form.Group className="mb-3" controlId="formName">
-                  <Form.Label>Name</Form.Label>
-                  <Form.Control
-                    placeholder="Enter name"
-                    {...register("name")}
-                  />
-                </Form.Group>
-              </Col>
-              <Col>
-                <Form.Group className="mb-3" controlId="formEmail">
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control
-                    required
-                    type="email"
-                    placeholder="Enter email"
-                    {...register("email")}
-                  />
-                </Form.Group>
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <Form.Group className="mb-3" controlId="formMessage">
-                  <Form.Label>Message</Form.Label>
-                  <Form.Control
-                    required
-                    as="textarea"
-                    rows={3}
-                    placeholder="Enter message"
-                    {...register("message")}
-                  />
-                </Form.Group>
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <Form.Group className="mb-3" controlId="formCheck">
-                  <Form.Check required label="Agree to terms and conditions" />
-                </Form.Group>
-              </Col>
-            </Row>
-            <Button type="submit">Submit</Button>
-          </form>
-        </Container>
-      </div>
+          <Row>
+            <Col>
+              <Form.Group className="mb-3" controlId="formMessage">
+                <Form.Label>Message</Form.Label>
+                <Form.Control
+                  required
+                  as="textarea"
+                  rows={3}
+                  placeholder="Enter message"
+                  {...register("message")}
+                />
+              </Form.Group>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Form.Group className="mb-3" controlId="formCheck">
+                <Form.Check required label="Agree to terms and conditions" />
+              </Form.Group>
+            </Col>
+          </Row>
+          <Button type="submit">Submit</Button>
+        </form>
+      </Container>
     </div>
   );
 }

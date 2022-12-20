@@ -7,7 +7,7 @@ import Navbar from "react-bootstrap/Navbar";
 function MyNavbar() {
   return (
     <div>
-      <Navbar bg="primary" variant="dark">
+      <Navbar bg="primary" variant="dark" fixed="top">
         <Container>
           <Navbar.Brand>Navbar</Navbar.Brand>
           <Nav className="me-auto">

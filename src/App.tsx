@@ -11,10 +11,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <MyNavbar></MyNavbar>
+      </header>
+      <div className="pt-8">
         <Projects></Projects>
         <ContactForm></ContactForm>
         <Footer></Footer>
-      </header>
+      </div>
     </div>
   );
 }
