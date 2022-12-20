@@ -10,14 +10,14 @@ function HardSkills() {
       <Container className="mb-3">
         <Row>
           <Col>
-            <h1>HardSkills</h1>
+            <h1>Hard Skills</h1>
           </Col>
         </Row>
       </Container>
       <Container>
         <Row>
           <Col>
-            <p>My HardSkills</p>
+            <p>My Hard Skills</p>
           </Col>
         </Row>
       </Container>

@@ -6,7 +6,7 @@ import Profile from "./components/Profile";
 import Education from "./components/Education";
 import Awards from "./components/Awards";
 import ProfessionalExperience from "./components/ProfessionalExperience";
-import Skills from "./components/SoftSkills";
+import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";

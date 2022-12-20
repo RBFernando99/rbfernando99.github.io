@@ -1,5 +1,9 @@
 import React from "react";
 
+import SoftSkills from "./SoftSkills";
+import HardSkills from "./HardSkills";
+import Languages from "./Languages";
+
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -15,11 +19,9 @@ function Skills() {
         </Row>
       </Container>
       <Container>
-        <Row>
-          <Col>
-            <p>My Skills</p>
-          </Col>
-        </Row>
+        <SoftSkills />
+        <HardSkills />
+        <Languages />
       </Container>
     </div>
   );
