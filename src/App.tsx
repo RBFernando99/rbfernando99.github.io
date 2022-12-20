@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 
 import MyNavbar from "./components/MyNavbar";
-import Skills from "./components/Skills";
+import Skills from "./components/SoftSkills";
 import Projects from "./components/Projects";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
