@@ -27,7 +27,10 @@ function HardSkills() {
               <Card.Body>
                 <Card.Title>General-purpose</Card.Title>
                 <Card.Text>
-                  <p>C / C++</p>
+                  <span>
+                    C / C++
+                    <br />
+                  </span>
                   <StarFill />
                   <StarFill />
                   <StarFill />
@@ -42,7 +45,9 @@ function HardSkills() {
               <Card.Body>
                 <Card.Title>Data Science</Card.Title>
                 <Card.Text>
-                  <p>Python / R</p>
+                  <span>
+                    Python / R<br />
+                  </span>
                   <StarFill />
                   <StarFill />
                   <StarFill />
@@ -57,7 +62,10 @@ function HardSkills() {
               <Card.Body>
                 <Card.Title>Web Development</Card.Title>
                 <Card.Text>
-                  <p>Java / Spring / React</p>
+                  <span>
+                    Java / Spring / React
+                    <br />
+                  </span>
                   <StarFill />
                   <StarFill />
                   <StarFill />
@@ -74,7 +82,10 @@ function HardSkills() {
               <Card.Body>
                 <Card.Title>Enviroments</Card.Title>
                 <Card.Text>
-                  <p>Linux / Bash / Git / Docker</p>
+                  <span>
+                    Linux / Bash / Git / Docker
+                    <br />
+                  </span>
                   <StarFill />
                   <StarFill />
                   <StarFill />
@@ -89,7 +100,10 @@ function HardSkills() {
               <Card.Body>
                 <Card.Title>Databases</Card.Title>
                 <Card.Text>
-                  <p>MongoDB / MySQL</p>
+                  <span>
+                    MongoDB / MySQL
+                    <br />
+                  </span>
                   <StarFill />
                   <StarFill />
                   <StarFill />
