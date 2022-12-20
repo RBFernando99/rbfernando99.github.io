@@ -9,7 +9,7 @@ function MyNavbar() {
     <div>
       <Navbar bg="primary" variant="dark" fixed="top">
         <Container>
-          <Navbar.Brand>Navbar</Navbar.Brand>
+          <Navbar.Brand href="#app">Home</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="#projects">Projects</Nav.Link>
             <Nav.Link href="#contact-form">Contact</Nav.Link>
