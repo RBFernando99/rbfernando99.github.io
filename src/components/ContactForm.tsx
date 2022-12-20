@@ -18,9 +18,16 @@ type FormData = {
 };
 
 function ContactForm() {
+  const [submitted, setSubmitted] = React.useState(false);
+
   const { register, handleSubmit } = useForm<FormData>();
-  const onSubmit = handleSubmit((data) => ContactFormService.save(data));
-  return (
+
+  const onSubmit = handleSubmit((data) => {
+    ContactFormService.create(data);
+    setSubmitted(true);
+  });
+
+  return !submitted ? (
     <div id="contact-form" className="mb-5">
       <Container className="mb-3">
         <Row>
@@ -73,6 +80,23 @@ function ContactForm() {
           </Row>
           <Button type="submit">Submit</Button>
         </form>
+      </Container>
+    </div>
+  ) : (
+    <div id="contact-form" className="mb-5">
+      <Container className="mb-3">
+        <Row>
+          <Col>
+            <h1>Contact me</h1>
+          </Col>
+        </Row>
+      </Container>
+      <Container>
+        <Row>
+          <Col>
+            <p>Thank you for your message!</p>
+          </Col>
+        </Row>
       </Container>
     </div>
   );
